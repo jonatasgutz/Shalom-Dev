@@ -6,13 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Alfredo</h1>
-    <script>
-    
-    let nome = prompt("Gutz")
-    
-   
-    </script>
-    
+    <h1 id="titulo">Gutz</h1>
+    <button onclick="generateColor()">Troca Cor</button>
+<script>
+
+function generateColor() {
+let titulo = document.getElementById("titulo")
+const letters = '0123456789ABCDEF';
+let color = '#';
+
+for (let i = 0; i < 6; i++) {
+  color += letters[Math.floor(Math.random() * 16)];
+}
+titulo.style.color=color
+
+}
+
+console.log(generateColor()) // #8432EA
+
+</script>
 </body>
 </html>
